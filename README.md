@@ -1,3 +1,5 @@
+Database row count: 30 000
+
 Hello, to use this program you should change db connections in appsettings.json file. 
 Then you should run the program. You will see the result in the console.
 ```csharp
