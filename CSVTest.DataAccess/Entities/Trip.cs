@@ -1,4 +1,5 @@
 ﻿using CSVTest.DataAccess.Constants.Flags;
+using Microsoft.EntityFrameworkCore;
 
 namespace CSVTest.DataAccess.Entities;
 
@@ -12,6 +13,8 @@ public class Trip
     public FwdFlag StoreAndFwdFlag { get; set; }
     public int PuLocationId { get; set; }
     public int DoLocationId { get; set; }
+    [Precision(2)]
     public decimal FareAmount { get; set; }
+    [Precision(2)]
     public decimal TipAmount { get; set; }
 }
