@@ -1,13 +1,54 @@
-﻿using CsvHelper.Configuration;
+﻿using System.Diagnostics;
+using CsvHelper.Configuration;
 using CSVTest.DataAccess.Constants.Flags;
 using CSVTest.DataAccess.Entities;
 using System.Globalization;
+using System.Linq.Expressions;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CSVTest.DataAccess.CSV.Map;
 
 
+using CsvHelper.Configuration;
+using CSVTest.DataAccess.Entities;
+
 public sealed class TripMap : ClassMap<Trip>
 {
+    public TripMap()
+    {
+        MapWithValidation(t => t.PickupDatetime, "tpep_pickup_datetime", field => ConvertEstToUtc(ConvertToDateTime(field)));
+        MapWithValidation(t => t.DropoffDatetime, "tpep_dropoff_datetime", field => ConvertEstToUtc(ConvertToDateTime(field)));
+        MapWithValidation(t => t.StoreAndFwdFlag, "store_and_fwd_flag", field => field == "Y" ? FwdFlag.Yes : FwdFlag.No);
+        MapWithValidation(t => t.PuLocationId, "PULocationID", field => int.Parse(field, CultureInfo.InvariantCulture));
+        MapWithValidation(t => t.DoLocationId, "DOLocationID", field => int.Parse(field, CultureInfo.InvariantCulture));
+        MapWithValidation(t => t.TripDistance, "trip_distance", field => float.Parse(field, CultureInfo.InvariantCulture));
+        MapWithValidation(t => t.PassengerCount, "passenger_count", field => int.Parse(field, CultureInfo.InvariantCulture));
+        MapWithValidation(t => t.FareAmount, "fare_amount", field => float.Parse(field, CultureInfo.InvariantCulture));
+        MapWithValidation(t => t.TipAmount, "tip_amount", field => float.Parse(field, CultureInfo.InvariantCulture));
+    }
+
+    private void MapWithValidation<TProperty>(
+        Expression<Func<Trip, TProperty>> member,
+        string columnName,
+        Func<string, TProperty> conversion)
+    {
+        Map(member)
+            .Name(columnName)
+            .Validate(row => !row.Field.IsNullOrEmpty())
+            .Convert(row =>
+            {
+                var field = row.Row.GetField(columnName);
+                
+                if (string.IsNullOrWhiteSpace(field))
+                {
+                    Debug.WriteLine($"Validation failed for column: {columnName}, value: {field}");
+                    return default(TProperty);
+                }
+                
+                return conversion(field);
+            });
+    }
+
     private static DateTime ConvertToDateTime(string dateTime, string format = "MM/dd/yyyy hh:mm:ss tt")
     {
         if (string.IsNullOrWhiteSpace(dateTime))
@@ -27,40 +68,10 @@ public sealed class TripMap : ClassMap<Trip>
 
         return parsedDate;
     }
-    private decimal TryParseDecimal(string field)
-    {
-        field = field.Replace(',', '.');
-        return decimal.TryParse(field, NumberStyles.Any, CultureInfo.InvariantCulture, out var value) ? value : 0m;
-    }
+
     private static DateTime ConvertEstToUtc(DateTime dateTime)
     {
         var easternTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
         return TimeZoneInfo.ConvertTimeToUtc(dateTime, easternTimeZone);
-    }
-    public TripMap()
-    {
-        Map(t => t.PickupDatetime).Name("tpep_pickup_datetime")
-            .Convert(x => ConvertEstToUtc(ConvertToDateTime(x.Row.GetField("tpep_pickup_datetime")!)));
-        Map(t => t.DropoffDatetime).Name("tpep_dropoff_datetime")
-            .Convert(x => ConvertEstToUtc(ConvertToDateTime(x.Row.GetField("tpep_dropoff_datetime")!))); ;
-        Map(t => t.StoreAndFwdFlag).Name("store_and_fwd_flag")
-            .Convert(row => row.Row.GetField("store_and_fwd_flag") == "Y" ? FwdFlag.Yes : FwdFlag.No);
-        Map(t => t.PuLocationId).Name("PULocationID");
-        Map(t => t.DoLocationId).Name("DOLocationID");
-        Map(t => t.TripDistance).Name("trip_distance");
-        Map(t => t.PassengerCount)
-            .Name("passenger_count")
-            .Validate(x => !string.IsNullOrEmpty(x.Field))
-            .Convert(row =>
-            {
-                var field = row.Row.GetField("passenger_count");
-                return int.TryParse(field, out var value) ? value : 0;
-            });
-        Map(t => t.FareAmount)
-          .Name("fare_amount");
-
-        Map(t => t.TipAmount)
-           .Name("tip_amount");
-
     }
 }

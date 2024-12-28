@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSVTest.DataTransfer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12088ab29cc60be55bbf5381f0dcb57b82b1418f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+223d110d8006aa6fe445f27d697d192bb7cda1a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSVTest.DataTransfer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSVTest.DataTransfer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
