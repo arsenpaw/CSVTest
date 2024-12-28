@@ -13,3 +13,6 @@ D:\CSVTest\CSVTest.DataTransfer\obj\Debug\net8.0\refint\CSVTest.DataTransfer.dll
 D:\CSVTest\CSVTest.DataTransfer\obj\Debug\net8.0\CSVTest.DataTransfer.pdb
 D:\CSVTest\CSVTest.DataTransfer\obj\Debug\net8.0\CSVTest.DataTransfer.genruntimeconfig.cache
 D:\CSVTest\CSVTest.DataTransfer\obj\Debug\net8.0\ref\CSVTest.DataTransfer.dll
+D:\CSVTest\CSVTest.DataTransfer\bin\Debug\net8.0\CSVTest.DataAccess.dll
+D:\CSVTest\CSVTest.DataTransfer\bin\Debug\net8.0\CSVTest.DataAccess.pdb
+D:\CSVTest\CSVTest.DataTransfer\obj\Debug\net8.0\CSVTest..9CBBC1C8.Up2Date

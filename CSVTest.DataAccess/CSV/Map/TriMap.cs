@@ -57,21 +57,10 @@ public sealed class TripMap : ClassMap<Trip>
                 return int.TryParse(field, out var value) ? value : 0;
             });
         Map(t => t.FareAmount)
-          .Name("fare_amount")
-          .Convert(row =>
-          {
-              var field = row.Row.GetField("fare_amount");
-              decimal t = TryParseDecimal(field);
-              return TryParseDecimal(field);
-          });
+          .Name("fare_amount");
 
-        //Map(t => t.TipAmount)
-        //    .Name("tip_amount")
-        //    .Convert(row =>
-        //    {
-        //        var field = row.Row.GetField("tip_amount");
-        //        return TryParseDecimal(field);
-        //    });
+        Map(t => t.TipAmount)
+           .Name("tip_amount");
 
     }
 }

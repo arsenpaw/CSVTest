@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSVTest.DataAccess.Migrations
 {
     [DbContext(typeof(CsvContext))]
-    [Migration("20241228145303_init")]
+    [Migration("20241228180825_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -38,8 +38,7 @@ namespace CSVTest.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("FareAmount")
-                        .HasPrecision(2, 2)
-                        .HasColumnType("decimal(2,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("PassengerCount")
                         .HasColumnType("int");
@@ -54,14 +53,15 @@ namespace CSVTest.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("TipAmount")
-                        .HasPrecision(2, 2)
-                        .HasColumnType("decimal(2,2)");
+                    b.Property<float>("TipAmount")
+                        .HasColumnType("real");
 
-                    b.Property<double>("TripDistance")
-                        .HasColumnType("float");
+                    b.Property<float>("TripDistance")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PuLocationId");
 
                     b.ToTable("Trips");
                 });

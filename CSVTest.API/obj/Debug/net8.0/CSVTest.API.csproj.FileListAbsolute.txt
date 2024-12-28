@@ -150,3 +150,4 @@ D:\CSVTest\CSVTest.API\obj\Debug\net8.0\refint\CSVTest.API.dll
 D:\CSVTest\CSVTest.API\obj\Debug\net8.0\CSVTest.API.pdb
 D:\CSVTest\CSVTest.API\obj\Debug\net8.0\CSVTest.API.genruntimeconfig.cache
 D:\CSVTest\CSVTest.API\obj\Debug\net8.0\ref\CSVTest.API.dll
+D:\CSVTest\CSVTest.API\bin\Debug\net8.0\AutoMapper.dll

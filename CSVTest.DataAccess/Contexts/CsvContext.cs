@@ -21,6 +21,11 @@ public class CsvContext : DbContext
             .Property(e => e.StoreAndFwdFlag)
             .HasConversion<string>();
 
+        modelBuilder.Entity<Trip>()
+            .HasIndex(t => t.PuLocationId);
+        
+        
+
 
     }
 }

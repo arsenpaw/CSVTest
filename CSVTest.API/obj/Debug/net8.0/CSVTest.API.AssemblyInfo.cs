@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSVTest.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c02394ff1d45cad6bbb1f572362d43578ab71196")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12088ab29cc60be55bbf5381f0dcb57b82b1418f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSVTest.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSVTest.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

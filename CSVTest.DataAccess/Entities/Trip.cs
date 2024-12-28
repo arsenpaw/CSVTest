@@ -9,13 +9,10 @@ public class Trip
     public DateTime PickupDatetime { get; set; }
     public DateTime DropoffDatetime { get; set; }
     public int PassengerCount { get; set; }
-    public double TripDistance { get; set; }
+    public float TripDistance { get; set; }
     public FwdFlag StoreAndFwdFlag { get; set; }
     public int PuLocationId { get; set; }
     public int DoLocationId { get; set; }
-    [Precision(2, 2)]
-
-    public decimal FareAmount { get; set; }
-    [Precision(2, 2)]
-    public decimal TipAmount { get; set; }
+    public float FareAmount { get; set; }
+    public float TipAmount { get; set; }
 }
