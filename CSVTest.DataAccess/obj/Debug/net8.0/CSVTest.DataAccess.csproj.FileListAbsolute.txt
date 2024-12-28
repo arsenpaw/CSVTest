@@ -1,0 +1,15 @@
+D:\CSVTest\CSVTest.DataAccess\bin\Debug\net8.0\CSVTest.DataAccess.deps.json
+D:\CSVTest\CSVTest.DataAccess\bin\Debug\net8.0\CSVTest.DataAccess.runtimeconfig.json
+D:\CSVTest\CSVTest.DataAccess\bin\Debug\net8.0\CSVTest.DataAccess.dll
+D:\CSVTest\CSVTest.DataAccess\bin\Debug\net8.0\CSVTest.DataAccess.pdb
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.csproj.AssemblyReference.cache
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.AssemblyInfoInputs.cache
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.AssemblyInfo.cs
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.csproj.CoreCompileInputs.cache
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.sourcelink.json
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.dll
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\refint\CSVTest.DataAccess.dll
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.pdb
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\CSVTest.DataAccess.genruntimeconfig.cache
+D:\CSVTest\CSVTest.DataAccess\obj\Debug\net8.0\ref\CSVTest.DataAccess.dll

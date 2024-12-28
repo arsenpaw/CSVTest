@@ -1,0 +1,15 @@
+D:\CSVTest\CSVTest.Business\bin\Debug\net8.0\CSVTest.Business.deps.json
+D:\CSVTest\CSVTest.Business\bin\Debug\net8.0\CSVTest.Business.runtimeconfig.json
+D:\CSVTest\CSVTest.Business\bin\Debug\net8.0\CSVTest.Business.dll
+D:\CSVTest\CSVTest.Business\bin\Debug\net8.0\CSVTest.Business.pdb
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.csproj.AssemblyReference.cache
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.AssemblyInfoInputs.cache
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.AssemblyInfo.cs
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.csproj.CoreCompileInputs.cache
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.sourcelink.json
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.dll
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\refint\CSVTest.Business.dll
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.pdb
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\CSVTest.Business.genruntimeconfig.cache
+D:\CSVTest\CSVTest.Business\obj\Debug\net8.0\ref\CSVTest.Business.dll
