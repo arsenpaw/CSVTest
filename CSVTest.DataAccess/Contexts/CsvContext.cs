@@ -3,10 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CSVTest.DataAccess.Contexts;
 
-public class CsvContext:DbContext
+public class CsvContext : DbContext
 {
     public DbSet<Trip> Trips { get; set; }
-    
+
+    public CsvContext()
+    {
+
+    }
     public CsvContext(DbContextOptions<CsvContext> options)
         : base(options)
     {
@@ -16,7 +20,7 @@ public class CsvContext:DbContext
         modelBuilder.Entity<Trip>()
             .Property(e => e.StoreAndFwdFlag)
             .HasConversion<string>();
-        
+
 
     }
 }
