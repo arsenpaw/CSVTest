@@ -1,0 +1,6 @@
+﻿services:
+  csvtest:
+    image: csvtest
+    build:
+      context: .
+      dockerfile: CSVTest/Dockerfile

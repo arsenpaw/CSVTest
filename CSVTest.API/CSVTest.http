@@ -1,0 +1,6 @@
+@CSVTest_HostAddress = http://localhost:5033
+
+GET {{CSVTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
